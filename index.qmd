@@ -64,7 +64,7 @@ A propos des fonctionnalités de thèmes
 ::: columns
 ::: {.column width="49%"}
 
-```{.yaml filename="basique.qmd"}
+```{.yaml}
 ---
 title: "Démo HTML"
 format: html
@@ -91,8 +91,8 @@ format:
 * Modifiable avec un simple CSS
 :::
 
-::: aside
-<https://quarto.org/docs/output-formats/html-basics.html#css-styles>
+::: footer
+[CSS](https://quarto.org/docs/output-formats/html-basics.html#css-styles)
 :::
 
 
@@ -104,7 +104,7 @@ format:
 ::: columns
 ::: {.column width="49%"}
 
-```{.yaml filename="minty.qmd"}
+```{.yaml}
 ---
 title: "Thème Bootswatch"
 format: 
@@ -116,7 +116,7 @@ format:
 ::: {.column width="2%"}
 :::
 ::: {.column width="49%"}
-```{.yaml filename="no-theme.qmd"}
+```{.yaml}
 ---
 title: "Pas de thème"
 format: 
@@ -132,8 +132,8 @@ format:
 * Similaire à R Markdown avec **bslib**
 :::
 
-::: aside
-<https://quarto.org/docs/output-formats/html-themes.html#overview>
+::: footer
+[Thèmes Bootwatch](https://quarto.org/docs/output-formats/html-themes.html#overview)
 :::
 
 ## {background-image="" visibility="hidden"}
@@ -142,9 +142,9 @@ format:
 
 ::: columns
 ::: {.column width="49%"}
-```{.yaml filename="minty-tweaked.qmd"}
+```{.yaml}
 ---
-title: "Thème Bootswatch modifié"
+title: "Thème modifié"
 format: 
   html:
     theme: minty
@@ -156,7 +156,7 @@ format:
 ::: {.column width="2%"}
 :::
 ::: {.column width="49%"}
-```{.yaml filename="darkmode.qmd"}
+```{.yaml}
 ---
 title: "Mode Clair / Sombre"
 format: 
@@ -176,7 +176,116 @@ Des configurations simplifiés par YAML:
 * Thèmes Clair et Sombre  
 :::
 
-::: aside
-<https://quarto.org/docs/output-formats/html-themes.html#basic-options>
-<https://quarto.org/docs/output-formats/html-themes.html#dark-mode>
+::: footer
+[YAML configuration](https://quarto.org/docs/output-formats/html-themes.html#basic-options) / [Dark mode](https://quarto.org/docs/output-formats/html-themes.html#dark-mode)
+:::
+
+## {background-image="" visibility="hidden"}
+
+## Aller plus loin dans la personnalisation ! 
+
+### Quarto themes, _powered by SASS_
+
+::: columns
+
+::: {.column width=40%}
+</br>
+
+```{.yaml}
+theme:
+  - minty
+  - perso.scss
+```
+:::
+::: {.column width=20%}
+:::
+::: {.column width=40%}
+</br>
+
+```{.yaml}
+theme: theme-perso.scss
+```
+:::
+:::
+
+Sass <https://sass-lang.com> est un langage d'extension CSS qui vous permet de créer des règles CSS de manière beaucoup plus souple.
+
+Utilisé par Bootstrap et Reveal JS
+
+![](https://sass-lang.com/assets/img/logos/logo-b6e1ef6e.svg){.absolute bottom=-10 right=80 width=20%}
+
+::: footer
+[Options de thèmes](https://quarto.org/docs/output-formats/html-themes.html#theme-options)
+:::
+
+## Fichier de Thème Quarto 
+
+```{.scss filename="perso.scss" code-line-numbers="|1,6|2-3|4,9|7-10"}
+/*-- scss:defaults --*/ 
+$h2-font-size:          1.6rem !default;
+$headings-font-weight:  500 !default;
+$custom-color: blue;
+
+/*-- scss:rules --*/
+h1, h2, h3, h4, h5, h6 {
+  text-shadow: -1px -1px 0 rgba(0, 0, 0, .3);
+  color: $custom-color;
+}
+```
+
+Il est ainsi possible d'accéder 
+
+* à toutes les variables Bootstrap
+* aux variables spécifiques Quarto 
+
+::: footer
+[Bootstrap SASS variables](https://github.com/twbs/bootstrap/blob/main/scss/_variables.scss) / [Quarto SASS variables](https://quarto.org/docs/output-formats/html-themes.html#sass-variables)
+:::
+
+## Comprendre le mécanisme
+
+### Une simplication par rapport à une utilise basique de SASS
+
+- Un [unique fichier]{.hl} pour appliquer son thème (SASS de base en demanderait plusieurs)
+
+- [Décorateurs de région]{.hl} pour définir les sections (`functions`, `defaults`, `mixins`, and `rules`)
+
+- [Superposition des sections en fonction de leur type pour intégration avec autres configuration (Bootstrap)
+
+- Résolution des fonctionnalité SASS `@use` ou `@import` en relatif au thème Quarto
+
+Voir [l'article spéciale de la documentation](https://quarto.org/docs/output-formats/html-themes-more.html#bootstrap-bootswatch-layering) pour comprendre le mécanime de superpositon des sections.
+
+::: footer
+[Quarto Themes Design](https://quarto.org/docs/output-formats/html-themes-more.html)
+:::
+
+## A retenir
+
+- Format HTML basée sur Bootstrap 5
+
+- Différents niveaux de personnalisations sont possibles
+
+- Intégration avec SASS via un fichier de thème unique
+
+- Permet une réutilisation simple des thèmes pour tous les formats HTML (documents, site web, blog, ...)
+
+- Permet un partage simplifier des thèmes entre utilisateurs  
+  (via le mécanisme d'Extension [Custom Format](https://quarto.org/docs/extensions/formats.html))
+
+
+**Pour s'inspirer**: [Gallerie Quarto](https://quarto.org/docs/gallery/)  
+**Exemple de thème communautaire**:  [Bookup](https://github.com/juba/bookup-html) [by Julien Barnier ([@juba](https://github.com/juba))]{.make-smaller}
+Thèmes clair et sombre basés sur la famille de police Roboto 
+
+# Des questions ?
+
+Merci! 
+
+::: {.make-smaller}
+
+{{< fa tv >}} <https://cderv.github.io/rr-2023-html-theming> 
+
+{{< fa brands github >}} <https://github.com/cderv/rr-2023-html-theming>
+
 :::
