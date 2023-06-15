@@ -13,6 +13,9 @@ format:
     mermaid-format: png
     preview-links: auto
     multiplex: true
+    preload-iframes: true
+    controls: true
+    controls-layout: edges
 revealjs-plugins:
   - attribution
 ---
@@ -96,7 +99,7 @@ format:
 :::
 
 
-## {background-image="images/quarto-html-screenshot2.png" background-size="1450px" visibility="uncounted"}
+## {background-iframe="demo/html.html" visibility="uncounted"}
 
 ## Un choix de thèmes disponibles...
 
@@ -135,7 +138,7 @@ format:
 [Thèmes Bootwatch](https://quarto.org/docs/output-formats/html-themes.html#overview)
 :::
 
-## {background-image="images/quarto-html-screenshot-bootswatch2.png" background-size="1450px" visibility="uncounted"}
+## {background-iframe="demo/html-bootswatch.html" visibility="uncounted"}
 
 ## ...facilement personalisable !
 
@@ -161,8 +164,8 @@ title: "Mode Clair / Sombre"
 format: 
   html:
     theme:
-      light: flatly
       dark: darkly
+      light: flatly
 ---
 ```
 :::
@@ -179,7 +182,7 @@ Des configurations simplifiés par YAML:
 [YAML configuration](https://quarto.org/docs/output-formats/html-themes.html#basic-options) / [Dark mode](https://quarto.org/docs/output-formats/html-themes.html#dark-mode)
 :::
 
-## {background-image="" visibility="hidden"}
+## {background-iframe="demo/html-bootswatch-dark.html" visibility="uncounted"}
 
 ## Aller plus loin dans la personnalisation ! 
 
@@ -188,7 +191,6 @@ Des configurations simplifiés par YAML:
 ::: columns
 
 ::: {.column width=40%}
-</br>
 
 ```{.yaml}
 theme:
@@ -199,7 +201,6 @@ theme:
 ::: {.column width=20%}
 :::
 ::: {.column width=40%}
-</br>
 
 ```{.yaml}
 theme: theme-perso.scss
@@ -232,16 +233,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 ```
 
-Il est ainsi possible d'accéder 
-
-* à toutes les variables Bootstrap
-* aux variables spécifiques Quarto 
+Il est ainsi possible d'accéder à toutes les variables Bootstrap, et aux variables spécifiques Quarto 
 
 ::: footer
 [Bootstrap SASS variables](https://github.com/twbs/bootstrap/blob/main/scss/_variables.scss) / [Quarto SASS variables](https://quarto.org/docs/output-formats/html-themes.html#sass-variables)
 :::
 
-## Comprendre le mécanisme
+## Comprendre le mécanisme {.smaller}
 
 ### Une simplication par rapport à une utilise basique de SASS
 
@@ -272,10 +270,11 @@ Voir [l'article spéciale de la documentation](https://quarto.org/docs/output-fo
 - Permet un partage simplifier des thèmes entre utilisateurs  
   (via le mécanisme d'Extension [Custom Format](https://quarto.org/docs/extensions/formats.html))
 
-
+::: aside
 **Pour s'inspirer**: [Gallerie Quarto](https://quarto.org/docs/gallery/)  
-**Exemple de thème communautaire**:  [Bookup](https://github.com/juba/bookup-html) [by Julien Barnier ([@juba](https://github.com/juba))]{.make-smaller}
-Thèmes clair et sombre basés sur la famille de police Roboto 
+**Exemple de thème communautaire**:  [Bookup](https://github.com/juba/bookup-html) [by Julien Barnier ([@juba](https://github.com/juba))]{.make-smaller}  
+Thèmes clair et sombre basés sur la famille de police Roboto
+::: 
 
 # Des questions ?
 
