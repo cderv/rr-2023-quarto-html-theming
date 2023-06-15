@@ -28,11 +28,11 @@
     "text": "Un choix de thèmes disponibles…\n\n\n---\ntitle: \"Thème Bootswatch\"\nformat: \n  html:\n    theme: lux\n---\n\n\n\n---\ntitle: \"Pas de thème\"\nformat: \n  html:\n    theme: none\n---\n\n\n\n\nInclusions de ~25 thèmes Bootswatch\nSimilaire à R Markdown avec bslib\n\n\n\nThèmes Bootwatch"
   },
   {
-    "objectID": "index.html#facilement-personalisable",
-    "href": "index.html#facilement-personalisable",
+    "objectID": "index.html#facilement-personnalisable",
+    "href": "index.html#facilement-personnalisable",
     "title": "Se démarquer avec les thèmes HTML Quarto",
-    "section": "…facilement personalisable !",
-    "text": "…facilement personalisable !\n\n\n---\ntitle: \"Thème modifié\"\nformat: \n  html:\n    theme: lux\n    fontsize: 1.1em\n    linestretch: 1.7\n---\n\n\n\n---\ntitle: \"Mode Clair / Sombre\"\nformat: \n  html:\n    theme:\n      dark: darkly\n      light: flatly\n---\n\n\n\nDes configurations simplifiés par YAML:\n\nValeur pour des variables CSS\nThèmes Clair et Sombre\n\n\n\n\nYAML configuration / Dark mode"
+    "section": "…facilement personnalisable !",
+    "text": "…facilement personnalisable !\n\n\n---\ntitle: \"Thème modifié\"\nformat: \n  html:\n    theme: lux\n    fontsize: 1.1em\n    linestretch: 1.7\n---\n\n\n\n---\ntitle: \"Mode Clair / Sombre\"\nformat: \n  html:\n    theme:\n      dark: darkly\n      light: flatly\n---\n\n\n\nDes configurations simplifiés par YAML:\n\nValeur pour des variables CSS\nThèmes Clair et Sombre\n\n\n\n\nYAML configuration / Dark mode"
   },
   {
     "objectID": "index.html#aller-plus-loin-dans-la-personnalisation",
