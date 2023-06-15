@@ -1,0 +1,182 @@
+---
+title: "Se démarquer avec les thèmes HTML Quarto"
+lang: fr
+subtitle: Rencontres R 2023
+author: "Christophe Dervieux"
+institute: "Posit PBC"
+date: 06/21/2023
+format:
+  clean-revealjs:
+    theme: [default, reveal-style.scss]
+    code-line-numbers: false
+    slide-number: true
+    mermaid-format: png
+    preview-links: auto
+    multiplex: true
+revealjs-plugins:
+  - attribution
+---
+
+# Qu'est-ce que Quarto ?
+
+C'est comme R Markdown non ? 
+
+## Quarto {.smaller}
+
+C'est un nouveau [système de publication scientifique et technique Open-Source]{.hl}, basé sur [Pandoc]{.hl}, pensé et construit sur les [+10 ans d'expérience avec R Markdown]{.hl}
+
+C'est un outil ligne de commande (CLI), non lié à un language en particulier et qui contient tout le nécessaire.
+
+```{.bash filename="Terminal"}
+quarto render document.qmd --to html
+```
+
+
+![Illustration de la présentation "Hello, Quarto" par Julia Lowndes et Mine Çetinkaya-Rundel, présentée à la conférence RStudio 2022. Illustré par Allison Horst.](images/horst_quarto_schematic.png){fig-alt="Un schéma représentant la polyvalence de Quarto en matière d'entrée multilingue (par exemple Python, R, Observable, Julia) et de sortie multiformat (par exemple PDF, html, documents Word, et plus encore)." fig-align="center"}
+
+## Quarto unifie + étend R Markdown {.smaller}
+
+::: columns
+::: {.column width="49%"}
+- Implémentation cohérente de fonctionnalités pour les différents formats de sorties : tabsets, code-folding, syntax highlighting, etc. 
+- Des valeurs par défaut plus accessibles et une meilleure prise en charge de l'accessibilité.
+:::
+::: {.column width="2%"}
+:::
+::: {.column width="49%"}
+- Support de R, Python, Julia, Observable, et plus encore via le moteur Jupyter pour les chunks de code exécutables.
+- De nouvelles fonctionnalités pour une meilleure expérience: auto-complétion YAML, informations sur les erreurs de syntaxe YAML, etc.
+:::
+:::
+
+::: {layout-ncol=2}
+![](images/qmd-knitr.jpeg){fig-alt="Un diagramme de la façon dont un .qmd est transformé en formats de sortie via knitr et pandoc"}
+
+![](images/jupyter-alone.jpeg){fig-alt="Un diagramme de la façon dont un .qmd est transformé en formats de sortie via jupyter et pandoc"}
+:::
+
+# Personnaliser sa sortie HTML avec Quarto
+
+A propos des fonctionnalités de thèmes 
+
+## Le format HTML
+
+::: columns
+::: {.column width="49%"}
+
+```{.yaml filename="basique.qmd"}
+---
+title: "Démo HTML"
+format: html
+---
+```
+:::
+::: {.column width="1%"}
+:::
+::: {.column width="50%"}
+```{.yaml filename="basique-style.qmd"}
+---
+title: "Démo HTML personalisée"
+format: 
+  html:
+    css: monstyle.css
+---
+```
+:::
+:::
+
+::: {.top-pad .bottom-pad}
+* Le thème par défaut est basée sur Bootstrap 5 (variante **bslib**)
+* Des choix par défaut améliorés par rapport à R Markdown
+* Modifiable avec un simple CSS
+:::
+
+::: aside
+<https://quarto.org/docs/output-formats/html-basics.html#css-styles>
+:::
+
+
+## {background-image="" visibility="hidden"}
+
+  
+## Un choix de thèmes disponibles...
+
+::: columns
+::: {.column width="49%"}
+
+```{.yaml filename="minty.qmd"}
+---
+title: "Thème Bootswatch"
+format: 
+  html:
+    theme: minty
+---
+```
+:::
+::: {.column width="2%"}
+:::
+::: {.column width="49%"}
+```{.yaml filename="no-theme.qmd"}
+---
+title: "Pas de thème"
+format: 
+  html:
+    theme: none
+---
+```
+:::
+:::
+
+::: {.top-pad .bottom-pad}
+* Inclusions de ~25 thèmes [Bootswatch](https://bootswatch.com/)
+* Similaire à R Markdown avec **bslib**
+:::
+
+::: aside
+<https://quarto.org/docs/output-formats/html-themes.html#overview>
+:::
+
+## {background-image="" visibility="hidden"}
+
+## ...facilement personalisable !
+
+::: columns
+::: {.column width="49%"}
+```{.yaml filename="minty-tweaked.qmd"}
+---
+title: "Thème Bootswatch modifié"
+format: 
+  html:
+    theme: minty
+    fontsize: 1.1em #<1>
+    linestretch: 1.7 #<2>
+---
+```
+:::
+::: {.column width="2%"}
+:::
+::: {.column width="49%"}
+```{.yaml filename="darkmode.qmd"}
+---
+title: "Mode Clair / Sombre"
+format: 
+  html:
+    theme: 
+      light: minty
+      dark: darkly
+---
+```
+:::
+:::
+
+::: {.top-pad .bottom-pad}
+Des configurations simplifiés par YAML: 
+
+* Valeur pour des variables CSS
+* Thèmes Clair et Sombre  
+:::
+
+::: aside
+<https://quarto.org/docs/output-formats/html-themes.html#basic-options>
+<https://quarto.org/docs/output-formats/html-themes.html#dark-mode>
+:::
