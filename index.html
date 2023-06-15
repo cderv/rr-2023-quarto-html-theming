@@ -495,7 +495,7 @@ Christophe Dervieux
 <p><a href="https://quarto.org/docs/output-formats/html-basics.html#css-styles">CSS</a></p>
 </div>
 </section>
-<section id="section" class="slide level2" data-background-image="images/quarto-html-screenshot2.png" data-visibility="uncounted">
+<section id="section" class="slide level2" data-background-iframe="demo/html.html" data-visibility="uncounted">
 <h2></h2>
 </section>
 <section id="un-choix-de-thèmes-disponibles" class="slide level2">
@@ -529,7 +529,7 @@ Christophe Dervieux
 <p><a href="https://quarto.org/docs/output-formats/html-themes.html#overview">Thèmes Bootwatch</a></p>
 </div>
 </section>
-<section id="section-1" class="slide level2" data-background-image="images/quarto-html-screenshot-bootswatch2.png" data-visibility="uncounted">
+<section id="section-1" class="slide level2" data-background-iframe="demo/html-bootswatch.html" data-visibility="uncounted">
 <h2></h2>
 </section>
 <section id="facilement-personalisable" class="slide level2">
@@ -552,8 +552,8 @@ Christophe Dervieux
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span><span class="at"> </span></span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
 <span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">theme</span><span class="kw">:</span></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">light</span><span class="kw">:</span><span class="at"> flatly</span></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">dark</span><span class="kw">:</span><span class="at"> darkly</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">dark</span><span class="kw">:</span><span class="at"> darkly</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">light</span><span class="kw">:</span><span class="at"> flatly</span></span>
 <span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
@@ -569,20 +569,20 @@ Christophe Dervieux
 <p><a href="https://quarto.org/docs/output-formats/html-themes.html#basic-options">YAML configuration</a> / <a href="https://quarto.org/docs/output-formats/html-themes.html#dark-mode">Dark mode</a></p>
 </div>
 </section>
-
+<section id="section-2" class="slide level2" data-background-iframe="demo/html-bootswatch-dark.html" data-visibility="uncounted">
+<h2></h2>
+</section>
 <section id="aller-plus-loin-dans-la-personnalisation" class="slide level2">
 <h2>Aller plus loin dans la personnalisation !</h2>
 <h3 id="quarto-themes-powered-by-sass">Quarto themes, <em>powered by SASS</em></h3>
 <div class="columns">
 <div class="column" style="width:40%;">
-<p><br></p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">theme</span><span class="kw">:</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> lux</span></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> perso.scss</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:20%;">
 
 </div><div class="column" style="width:40%;">
-<p><br></p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">theme</span><span class="kw">:</span><span class="at"> theme-perso.scss</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
@@ -610,16 +610,12 @@ Christophe Dervieux
 <span id="cb9-9"><a href="#cb9-9"></a>  <span class="kw">color</span>: <span class="va">$custom-color</span><span class="op">;</span></span>
 <span id="cb9-10"><a href="#cb9-10"></a>}</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Il est ainsi possible d’accéder</p>
-<ul>
-<li>à toutes les variables Bootstrap</li>
-<li>aux variables spécifiques Quarto</li>
-</ul>
+<p>Il est ainsi possible d’accéder à toutes les variables Bootstrap, et aux variables spécifiques Quarto</p>
 <div class="footer">
 <p><a href="https://github.com/twbs/bootstrap/blob/main/scss/_variables.scss">Bootstrap SASS variables</a> / <a href="https://quarto.org/docs/output-formats/html-themes.html#sass-variables">Quarto SASS variables</a></p>
 </div>
 </section>
-<section id="comprendre-le-mécanisme" class="slide level2">
+<section id="comprendre-le-mécanisme" class="slide level2 smaller">
 <h2>Comprendre le mécanisme</h2>
 <h3 id="une-simplication-par-rapport-à-une-utilise-basique-de-sass">Une simplication par rapport à une utilise basique de SASS</h3>
 <ul>
@@ -643,9 +639,12 @@ Christophe Dervieux
 <li><p>Permet un partage simplifier des thèmes entre utilisateurs<br>
 (via le mécanisme d’Extension <a href="https://quarto.org/docs/extensions/formats.html">Custom Format</a>)</p></li>
 </ul>
+
+<aside><div>
 <p><strong>Pour s’inspirer</strong>: <a href="https://quarto.org/docs/gallery/">Gallerie Quarto</a><br>
-<strong>Exemple de thème communautaire</strong>: <a href="https://github.com/juba/bookup-html">Bookup</a> <span class="make-smaller">by Julien Barnier (<a href="https://github.com/juba"><span class="citation" data-cites="juba">@juba</span></a>)</span> Thèmes clair et sombre basés sur la famille de police Roboto</p>
-</section></section>
+<strong>Exemple de thème communautaire</strong>: <a href="https://github.com/juba/bookup-html">Bookup</a> <span class="make-smaller">by Julien Barnier (<a href="https://github.com/juba"><span class="citation" data-cites="juba">@juba</span></a>)</span><br>
+Thèmes clair et sombre basés sur la famille de police Roboto</p>
+</div></aside></section></section>
 <section id="des-questions" class="title-slide slide level1 center">
 <h1>Des questions ?</h1>
 <p>Merci!</p>
@@ -684,7 +683,7 @@ Christophe Dervieux
       // Full list of configuration options available at:
       // https://revealjs.com/config/
       Reveal.initialize({
-'controlsAuto': true,
+'controlsAuto': false,
 'previewLinksAuto': true,
 'smaller': false,
 'pdfSeparateFragments': false,
@@ -696,7 +695,7 @@ Christophe Dervieux
 'smaller': false,
  
         // Display controls in the bottom right corner
-        controls: false,
+        controls: true,
 
         // Help the user learn the controls by providing hints, for example by
         // bouncing the down arrow when they first encounter a vertical slide
@@ -784,7 +783,7 @@ Christophe Dervieux
         autoPlayMedia: null,
 
         // Global override for preloading lazy-loaded iframes (null/true/false)
-        preloadIframes: null,
+        preloadIframes: true,
 
         // Number of milliseconds between automatically proceeding to the
         // next slide, disabled when set to 0, this value can be overwritten
