@@ -1,0 +1,149 @@
+[
+  {
+    "objectID": "index.html#quarto",
+    "href": "index.html#quarto",
+    "title": "Se démarquer avec les thèmes HTML Quarto",
+    "section": "Quarto",
+    "text": "Quarto\nC’est un nouveau système de publication scientifique et technique Open-Source, basé sur Pandoc, pensé et construit sur les +10 ans d’expérience avec R Markdown\nC’est un outil ligne de commande (CLI), non lié à un language en particulier et qui contient tout le nécessaire.\n\n\nTerminal\n\nquarto render document.qmd --to html\n\n\nIllustration de la présentation “Hello, Quarto” par Julia Lowndes et Mine Çetinkaya-Rundel, présentée à la conférence RStudio 2022. Illustré par Allison Horst."
+  },
+  {
+    "objectID": "index.html#quarto-unifie-étend-r-markdown",
+    "href": "index.html#quarto-unifie-étend-r-markdown",
+    "title": "Se démarquer avec les thèmes HTML Quarto",
+    "section": "Quarto unifie + étend R Markdown",
+    "text": "Quarto unifie + étend R Markdown\n\n\n\nImplémentation cohérente de fonctionnalités pour les différents formats de sorties : tabsets, code-folding, syntax highlighting, etc.\nDes valeurs par défaut plus accessibles et une meilleure prise en charge de l’accessibilité.\n\n\n\n\n\nSupport de R, Python, Julia, Observable, et plus encore via le moteur Jupyter pour les chunks de code exécutables.\nDe nouvelles fonctionnalités pour une meilleure expérience: auto-complétion YAML, informations sur les erreurs de syntaxe YAML, etc."
+  },
+  {
+    "objectID": "index.html#le-format-html",
+    "href": "index.html#le-format-html",
+    "title": "Se démarquer avec les thèmes HTML Quarto",
+    "section": "Le format HTML",
+    "text": "Le format HTML\n\n\n---\ntitle: \"Démo HTML\"\nformat: html\n---\n\n\n\n\n\nbasique-style.qmd\n\n---\ntitle: \"Démo HTML personalisée\"\nformat: \n  html:\n    css: monstyle.css\n---\n\n\n\n\n\nLe thème par défaut est basée sur Bootstrap 5 (variante bslib)\nDes choix par défaut améliorés par rapport à R Markdown\nModifiable avec un simple CSS\n\n\n\nCSS"
+  },
+  {
+    "objectID": "index.html#un-choix-de-thèmes-disponibles",
+    "href": "index.html#un-choix-de-thèmes-disponibles",
+    "title": "Se démarquer avec les thèmes HTML Quarto",
+    "section": "Un choix de thèmes disponibles…",
+    "text": "Un choix de thèmes disponibles…\n\n\n---\ntitle: \"Thème Bootswatch\"\nformat: \n  html:\n    theme: lux\n---\n\n\n\n---\ntitle: \"Pas de thème\"\nformat: \n  html:\n    theme: none\n---\n\n\n\n\nInclusions de ~25 thèmes Bootswatch\nSimilaire à R Markdown avec bslib\n\n\n\nThèmes Bootwatch"
+  },
+  {
+    "objectID": "index.html#facilement-personalisable",
+    "href": "index.html#facilement-personalisable",
+    "title": "Se démarquer avec les thèmes HTML Quarto",
+    "section": "…facilement personalisable !",
+    "text": "…facilement personalisable !\n\n\n---\ntitle: \"Thème modifié\"\nformat: \n  html:\n    theme: lux\n    fontsize: 1.1em\n    linestretch: 1.7\n---\n\n\n\n---\ntitle: \"Mode Clair / Sombre\"\nformat: \n  html:\n    theme:\n      dark: darkly\n      light: flatly\n---\n\n\n\nDes configurations simplifiés par YAML:\n\nValeur pour des variables CSS\nThèmes Clair et Sombre\n\n\n\n\nYAML configuration / Dark mode"
+  },
+  {
+    "objectID": "index.html#aller-plus-loin-dans-la-personnalisation",
+    "href": "index.html#aller-plus-loin-dans-la-personnalisation",
+    "title": "Se démarquer avec les thèmes HTML Quarto",
+    "section": "Aller plus loin dans la personnalisation !",
+    "text": "Aller plus loin dans la personnalisation !\nQuarto themes, powered by SASS\n\n\ntheme:\n  - lux\n  - perso.scss\n\n\n\ntheme: theme-perso.scss\n\n\nSass https://sass-lang.com est un langage d’extension CSS qui vous permet de créer des règles CSS de manière beaucoup plus souple.\nUtilisé par Bootstrap et Reveal JS\n\n\nOptions de thèmes"
+  },
+  {
+    "objectID": "index.html#fichier-de-thème-quarto",
+    "href": "index.html#fichier-de-thème-quarto",
+    "title": "Se démarquer avec les thèmes HTML Quarto",
+    "section": "Fichier de Thème Quarto",
+    "text": "Fichier de Thème Quarto\n\n\nperso.scss\n\n/*-- scss:defaults --*/ \n$h2-font-size:          1.6rem !default;\n$headings-font-weight:  500 !default;\n$custom-color: blue;\n\n/*-- scss:rules --*/\nh1, h2, h3, h4, h5, h6 {\n  text-shadow: -1px -1px 0 rgba(0, 0, 0, .3);\n  color: $custom-color;\n}\n\nIl est ainsi possible d’accéder à toutes les variables Bootstrap, et aux variables spécifiques Quarto\n\nBootstrap SASS variables / Quarto SASS variables"
+  },
+  {
+    "objectID": "index.html#comprendre-le-mécanisme",
+    "href": "index.html#comprendre-le-mécanisme",
+    "title": "Se démarquer avec les thèmes HTML Quarto",
+    "section": "Comprendre le mécanisme",
+    "text": "Comprendre le mécanisme\nUne simplication par rapport à une utilise basique de SASS\n\nUn unique fichier pour appliquer son thème (SASS de base en demanderait plusieurs)\nDécorateurs de région pour définir les sections (functions, defaults, mixins, and rules)\n[Superposition des sections en fonction de leur type pour intégration avec autres configuration (Bootstrap)\nRésolution des fonctionnalité SASS @use ou @import en relatif au thème Quarto\n\nVoir l’article spéciale de la documentation pour comprendre le mécanime de superpositon des sections.\n\nQuarto Themes Design"
+  },
+  {
+    "objectID": "index.html#a-retenir",
+    "href": "index.html#a-retenir",
+    "title": "Se démarquer avec les thèmes HTML Quarto",
+    "section": "A retenir",
+    "text": "A retenir\n\nFormat HTML basée sur Bootstrap 5\nDifférents niveaux de personnalisations sont possibles\nIntégration avec SASS via un fichier de thème unique\nPermet une réutilisation simple des thèmes pour tous les formats HTML (documents, site web, blog, …)\nPermet un partage simplifier des thèmes entre utilisateurs\n(via le mécanisme d’Extension Custom Format)\n\n\n\nPour s’inspirer: Gallerie Quarto\nExemple de thème communautaire: Bookup by Julien Barnier (@juba)\nThèmes clair et sombre basés sur la famille de police Roboto"
+  },
+  {
+    "objectID": "demo/html-bootswatch.html",
+    "href": "demo/html-bootswatch.html",
+    "title": "Une histoire de manchots",
+    "section": "",
+    "text": "Pour cette analyse, nous utiliserons le jeu de données sur les manchots du paquet R palmerpenguins (https://allisonhorst.github.io/palmerpenguins).\n\nlibrary(tidyverse)\nlibrary(palmerpenguins)\nlibrary(gt)\n\nLes données penguins contiennent les éléments suivants\n\nglimpse(penguins)\n\nRows: 344\nColumns: 8\n$ species           &lt;fct&gt; Adelie, Adelie, Adelie, Adelie, Adelie, Adelie, Adel…\n$ island            &lt;fct&gt; Torgersen, Torgersen, Torgersen, Torgersen, Torgerse…\n$ bill_length_mm    &lt;dbl&gt; 39.1, 39.5, 40.3, NA, 36.7, 39.3, 38.9, 39.2, 34.1, …\n$ bill_depth_mm     &lt;dbl&gt; 18.7, 17.4, 18.0, NA, 19.3, 20.6, 17.8, 19.6, 18.1, …\n$ flipper_length_mm &lt;int&gt; 181, 186, 195, NA, 193, 190, 181, 195, 193, 190, 186…\n$ body_mass_g       &lt;int&gt; 3750, 3800, 3250, NA, 3450, 3650, 3625, 4675, 3475, …\n$ sex               &lt;fct&gt; male, female, female, NA, female, male, female, male…\n$ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007…"
+  },
+  {
+    "objectID": "demo/html-bootswatch.html#données",
+    "href": "demo/html-bootswatch.html#données",
+    "title": "Une histoire de manchots",
+    "section": "",
+    "text": "Pour cette analyse, nous utiliserons le jeu de données sur les manchots du paquet R palmerpenguins (https://allisonhorst.github.io/palmerpenguins).\n\nlibrary(tidyverse)\nlibrary(palmerpenguins)\nlibrary(gt)\n\nLes données penguins contiennent les éléments suivants\n\nglimpse(penguins)\n\nRows: 344\nColumns: 8\n$ species           &lt;fct&gt; Adelie, Adelie, Adelie, Adelie, Adelie, Adelie, Adel…\n$ island            &lt;fct&gt; Torgersen, Torgersen, Torgersen, Torgersen, Torgerse…\n$ bill_length_mm    &lt;dbl&gt; 39.1, 39.5, 40.3, NA, 36.7, 39.3, 38.9, 39.2, 34.1, …\n$ bill_depth_mm     &lt;dbl&gt; 18.7, 17.4, 18.0, NA, 19.3, 20.6, 17.8, 19.6, 18.1, …\n$ flipper_length_mm &lt;int&gt; 181, 186, 195, NA, 193, 190, 181, 195, 193, 190, 186…\n$ body_mass_g       &lt;int&gt; 3750, 3800, 3250, NA, 3450, 3650, 3625, 4675, 3475, …\n$ sex               &lt;fct&gt; male, female, female, NA, female, male, female, male…\n$ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007…"
+  },
+  {
+    "objectID": "demo/html-bootswatch.html#espèces",
+    "href": "demo/html-bootswatch.html#espèces",
+    "title": "Une histoire de manchots",
+    "section": "Espèces",
+    "text": "Espèces\nNous avons 3 des espèces dans ce jeu de données : Adelie, Gentoo, and Chinstrap qui ne sont pas distribuées de manière égale.\n\npenguins |&gt;\n  count(species) %&gt;%\n  knitr::kable()\n\n\n\n\n\nspecies\nn\n\n\n\n\nAdelie\n152\n\n\nChinstrap\n68\n\n\nGentoo\n124\n\n\n\n\n\n\n\n\n\nFigure 1: Illustration de la longueur et de la profondeur du bec des manchots\n\n\n\n\nLa Figure 2 montrent les différences de becs par espèces.\n\nggplot(\n  penguins,\n  aes(\n    x = bill_length_mm, y = bill_depth_mm,\n    color = species, shape = species\n  )\n) +\n  geom_point() +\n  labs(x = \"Longueur du bec (mm)\", y = \"Profondeur du bec (mm)\")\n\n\n\n\nFigure 2: Catégorisation des espèces selon la taille leur bec"
+  },
+  {
+    "objectID": "demo/html-bootswatch.html#manchots",
+    "href": "demo/html-bootswatch.html#manchots",
+    "title": "Une histoire de manchots",
+    "section": "Manchots",
+    "text": "Manchots\nLe tableau ci-dessous Table 1 présente les 10 premiers manchots de l’ensemble de données.\n\npenguins |&gt;\n  slice_head(n = 10) |&gt;\n  select(species, island, bill_length_mm, bill_depth_mm) |&gt;\n1  gt()\n\n\n1\n\nOn utilise gt ici, mais tout paquet de tableau peut être utilisé par example flextable\n\n\n\n\n\n\n\nTable 1:  Les 10 premiers éléments du jeu de données \n  \n    \n    \n      species\n      island\n      bill_length_mm\n      bill_depth_mm\n    \n  \n  \n    Adelie\nTorgersen\n39.1\n18.7\n    Adelie\nTorgersen\n39.5\n17.4\n    Adelie\nTorgersen\n40.3\n18.0\n    Adelie\nTorgersen\nNA\nNA\n    Adelie\nTorgersen\n36.7\n19.3\n    Adelie\nTorgersen\n39.3\n20.6\n    Adelie\nTorgersen\n38.9\n17.8\n    Adelie\nTorgersen\n39.2\n19.6\n    Adelie\nTorgersen\n34.1\n18.1\n    Adelie\nTorgersen\n42.0\n20.2\n  \n  \n  \n\n\n\n\n\n\n\n\n\n\n\nPour aller plus loin sur ce jeu de donnée\n\n\n\n\n\nConsulter la vignette du paquet R palmerpinguins disponible sur https://allisonhorst.github.io/palmerpenguins/"
+  },
+  {
+    "objectID": "demo/html-bootswatch-dark.html",
+    "href": "demo/html-bootswatch-dark.html",
+    "title": "Une histoire de manchots",
+    "section": "",
+    "text": "Pour cette analyse, nous utiliserons le jeu de données sur les manchots du paquet R palmerpenguins (https://allisonhorst.github.io/palmerpenguins).\n\nlibrary(tidyverse)\nlibrary(palmerpenguins)\nlibrary(gt)\n\nLes données penguins contiennent les éléments suivants\n\nglimpse(penguins)\n\nRows: 344\nColumns: 8\n$ species           &lt;fct&gt; Adelie, Adelie, Adelie, Adelie, Adelie, Adelie, Adel…\n$ island            &lt;fct&gt; Torgersen, Torgersen, Torgersen, Torgersen, Torgerse…\n$ bill_length_mm    &lt;dbl&gt; 39.1, 39.5, 40.3, NA, 36.7, 39.3, 38.9, 39.2, 34.1, …\n$ bill_depth_mm     &lt;dbl&gt; 18.7, 17.4, 18.0, NA, 19.3, 20.6, 17.8, 19.6, 18.1, …\n$ flipper_length_mm &lt;int&gt; 181, 186, 195, NA, 193, 190, 181, 195, 193, 190, 186…\n$ body_mass_g       &lt;int&gt; 3750, 3800, 3250, NA, 3450, 3650, 3625, 4675, 3475, …\n$ sex               &lt;fct&gt; male, female, female, NA, female, male, female, male…\n$ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007…"
+  },
+  {
+    "objectID": "demo/html-bootswatch-dark.html#données",
+    "href": "demo/html-bootswatch-dark.html#données",
+    "title": "Une histoire de manchots",
+    "section": "",
+    "text": "Pour cette analyse, nous utiliserons le jeu de données sur les manchots du paquet R palmerpenguins (https://allisonhorst.github.io/palmerpenguins).\n\nlibrary(tidyverse)\nlibrary(palmerpenguins)\nlibrary(gt)\n\nLes données penguins contiennent les éléments suivants\n\nglimpse(penguins)\n\nRows: 344\nColumns: 8\n$ species           &lt;fct&gt; Adelie, Adelie, Adelie, Adelie, Adelie, Adelie, Adel…\n$ island            &lt;fct&gt; Torgersen, Torgersen, Torgersen, Torgersen, Torgerse…\n$ bill_length_mm    &lt;dbl&gt; 39.1, 39.5, 40.3, NA, 36.7, 39.3, 38.9, 39.2, 34.1, …\n$ bill_depth_mm     &lt;dbl&gt; 18.7, 17.4, 18.0, NA, 19.3, 20.6, 17.8, 19.6, 18.1, …\n$ flipper_length_mm &lt;int&gt; 181, 186, 195, NA, 193, 190, 181, 195, 193, 190, 186…\n$ body_mass_g       &lt;int&gt; 3750, 3800, 3250, NA, 3450, 3650, 3625, 4675, 3475, …\n$ sex               &lt;fct&gt; male, female, female, NA, female, male, female, male…\n$ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007…"
+  },
+  {
+    "objectID": "demo/html-bootswatch-dark.html#espèces",
+    "href": "demo/html-bootswatch-dark.html#espèces",
+    "title": "Une histoire de manchots",
+    "section": "Espèces",
+    "text": "Espèces\nNous avons 3 des espèces dans ce jeu de données : Adelie, Gentoo, and Chinstrap qui ne sont pas distribuées de manière égale.\n\npenguins |&gt;\n  count(species) %&gt;%\n  knitr::kable()\n\n\n\n\n\nspecies\nn\n\n\n\n\nAdelie\n152\n\n\nChinstrap\n68\n\n\nGentoo\n124\n\n\n\n\n\n\n\n\n\nFigure 1: Illustration de la longueur et de la profondeur du bec des manchots\n\n\n\n\nLa Figure 2 montrent les différences de becs par espèces.\n\nggplot(\n  penguins,\n  aes(\n    x = bill_length_mm, y = bill_depth_mm,\n    color = species, shape = species\n  )\n) +\n  geom_point() +\n  labs(x = \"Longueur du bec (mm)\", y = \"Profondeur du bec (mm)\")\n\n\n\n\nFigure 2: Catégorisation des espèces selon la taille leur bec"
+  },
+  {
+    "objectID": "demo/html-bootswatch-dark.html#manchots",
+    "href": "demo/html-bootswatch-dark.html#manchots",
+    "title": "Une histoire de manchots",
+    "section": "Manchots",
+    "text": "Manchots\nLe tableau ci-dessous Table 1 présente les 10 premiers manchots de l’ensemble de données.\n\npenguins |&gt;\n  slice_head(n = 10) |&gt;\n  select(species, island, bill_length_mm, bill_depth_mm) |&gt;\n1  gt()\n\n\n1\n\nOn utilise gt ici, mais tout paquet de tableau peut être utilisé par example flextable\n\n\n\n\n\n\n\nTable 1:  Les 10 premiers éléments du jeu de données \n  \n    \n    \n      species\n      island\n      bill_length_mm\n      bill_depth_mm\n    \n  \n  \n    Adelie\nTorgersen\n39.1\n18.7\n    Adelie\nTorgersen\n39.5\n17.4\n    Adelie\nTorgersen\n40.3\n18.0\n    Adelie\nTorgersen\nNA\nNA\n    Adelie\nTorgersen\n36.7\n19.3\n    Adelie\nTorgersen\n39.3\n20.6\n    Adelie\nTorgersen\n38.9\n17.8\n    Adelie\nTorgersen\n39.2\n19.6\n    Adelie\nTorgersen\n34.1\n18.1\n    Adelie\nTorgersen\n42.0\n20.2\n  \n  \n  \n\n\n\n\n\n\n\n\n\n\n\nPour aller plus loin sur ce jeu de donnée\n\n\n\n\n\nConsulter la vignette du paquet R palmerpinguins disponible sur https://allisonhorst.github.io/palmerpenguins/"
+  },
+  {
+    "objectID": "demo/html.html",
+    "href": "demo/html.html",
+    "title": "Une histoire de manchots",
+    "section": "",
+    "text": "Pour cette analyse, nous utiliserons le jeu de données sur les manchots du paquet R palmerpenguins (https://allisonhorst.github.io/palmerpenguins).\n\nlibrary(tidyverse)\nlibrary(palmerpenguins)\nlibrary(gt)\n\nLes données penguins contiennent les éléments suivants\n\nglimpse(penguins)\n\nRows: 344\nColumns: 8\n$ species           &lt;fct&gt; Adelie, Adelie, Adelie, Adelie, Adelie, Adelie, Adel…\n$ island            &lt;fct&gt; Torgersen, Torgersen, Torgersen, Torgersen, Torgerse…\n$ bill_length_mm    &lt;dbl&gt; 39.1, 39.5, 40.3, NA, 36.7, 39.3, 38.9, 39.2, 34.1, …\n$ bill_depth_mm     &lt;dbl&gt; 18.7, 17.4, 18.0, NA, 19.3, 20.6, 17.8, 19.6, 18.1, …\n$ flipper_length_mm &lt;int&gt; 181, 186, 195, NA, 193, 190, 181, 195, 193, 190, 186…\n$ body_mass_g       &lt;int&gt; 3750, 3800, 3250, NA, 3450, 3650, 3625, 4675, 3475, …\n$ sex               &lt;fct&gt; male, female, female, NA, female, male, female, male…\n$ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007…"
+  },
+  {
+    "objectID": "demo/html.html#données",
+    "href": "demo/html.html#données",
+    "title": "Une histoire de manchots",
+    "section": "",
+    "text": "Pour cette analyse, nous utiliserons le jeu de données sur les manchots du paquet R palmerpenguins (https://allisonhorst.github.io/palmerpenguins).\n\nlibrary(tidyverse)\nlibrary(palmerpenguins)\nlibrary(gt)\n\nLes données penguins contiennent les éléments suivants\n\nglimpse(penguins)\n\nRows: 344\nColumns: 8\n$ species           &lt;fct&gt; Adelie, Adelie, Adelie, Adelie, Adelie, Adelie, Adel…\n$ island            &lt;fct&gt; Torgersen, Torgersen, Torgersen, Torgersen, Torgerse…\n$ bill_length_mm    &lt;dbl&gt; 39.1, 39.5, 40.3, NA, 36.7, 39.3, 38.9, 39.2, 34.1, …\n$ bill_depth_mm     &lt;dbl&gt; 18.7, 17.4, 18.0, NA, 19.3, 20.6, 17.8, 19.6, 18.1, …\n$ flipper_length_mm &lt;int&gt; 181, 186, 195, NA, 193, 190, 181, 195, 193, 190, 186…\n$ body_mass_g       &lt;int&gt; 3750, 3800, 3250, NA, 3450, 3650, 3625, 4675, 3475, …\n$ sex               &lt;fct&gt; male, female, female, NA, female, male, female, male…\n$ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007…"
+  },
+  {
+    "objectID": "demo/html.html#espèces",
+    "href": "demo/html.html#espèces",
+    "title": "Une histoire de manchots",
+    "section": "Espèces",
+    "text": "Espèces\nNous avons 3 des espèces dans ce jeu de données : Adelie, Gentoo, and Chinstrap qui ne sont pas distribuées de manière égale.\n\npenguins |&gt;\n  count(species) %&gt;%\n  knitr::kable()\n\n\n\n\n\nspecies\nn\n\n\n\n\nAdelie\n152\n\n\nChinstrap\n68\n\n\nGentoo\n124\n\n\n\n\n\n\n\n\n\nFigure 1: Illustration de la longueur et de la profondeur du bec des manchots\n\n\n\n\nLa Figure 2 montrent les différences de becs par espèces.\n\nggplot(\n  penguins,\n  aes(\n    x = bill_length_mm, y = bill_depth_mm,\n    color = species, shape = species\n  )\n) +\n  geom_point() +\n  labs(x = \"Longueur du bec (mm)\", y = \"Profondeur du bec (mm)\")\n\n\n\n\nFigure 2: Catégorisation des espèces selon la taille leur bec"
+  },
+  {
+    "objectID": "demo/html.html#manchots",
+    "href": "demo/html.html#manchots",
+    "title": "Une histoire de manchots",
+    "section": "Manchots",
+    "text": "Manchots\nLe tableau ci-dessous Table 1 présente les 10 premiers manchots de l’ensemble de données.\n\npenguins |&gt;\n  slice_head(n = 10) |&gt;\n  select(species, island, bill_length_mm, bill_depth_mm) |&gt;\n1  gt()\n\n\n1\n\nOn utilise gt ici, mais tout paquet de tableau peut être utilisé par example flextable\n\n\n\n\n\n\n\nTable 1:  Les 10 premiers éléments du jeu de données \n  \n    \n    \n      species\n      island\n      bill_length_mm\n      bill_depth_mm\n    \n  \n  \n    Adelie\nTorgersen\n39.1\n18.7\n    Adelie\nTorgersen\n39.5\n17.4\n    Adelie\nTorgersen\n40.3\n18.0\n    Adelie\nTorgersen\nNA\nNA\n    Adelie\nTorgersen\n36.7\n19.3\n    Adelie\nTorgersen\n39.3\n20.6\n    Adelie\nTorgersen\n38.9\n17.8\n    Adelie\nTorgersen\n39.2\n19.6\n    Adelie\nTorgersen\n34.1\n18.1\n    Adelie\nTorgersen\n42.0\n20.2\n  \n  \n  \n\n\n\n\n\n\n\n\n\n\n\nPour aller plus loin sur ce jeu de donnée\n\n\n\n\n\nConsulter la vignette du paquet R palmerpinguins disponible sur https://allisonhorst.github.io/palmerpenguins/"
+  }
+]
