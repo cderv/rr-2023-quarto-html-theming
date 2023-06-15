@@ -160,8 +160,8 @@ format:
 title: "Mode Clair / Sombre"
 format: 
   html:
-    theme: 
-      light: lux
+    theme:
+      light: flatly
       dark: darkly
 ---
 ```

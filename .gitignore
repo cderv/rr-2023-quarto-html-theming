@@ -9,3 +9,5 @@
 .DS_Store
 /*.html
 /*-speaker.html
+
+/.luarc.json
