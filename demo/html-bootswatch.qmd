@@ -6,7 +6,10 @@ format:
   html:
     toc: true
     theme: lux
+    embed-resources: true
 code-annotations: hover
+execute:
+  cache: true
 ---
 
 ## Données

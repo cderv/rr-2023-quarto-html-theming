@@ -5,6 +5,7 @@
 /.quarto/
 *.html
 *_files/
+/_site
 *_cache/
 .DS_Store
 /*.html

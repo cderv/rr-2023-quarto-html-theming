@@ -4,11 +4,14 @@ lang: fr
 date: "2023-06-21"
 format: 
   html:
+    embed-resources: true
     toc: true
     theme:
       dark: darkly
       light: flatly
 code-annotations: hover
+execute:
+  cache: true
 ---
 
 ## Données

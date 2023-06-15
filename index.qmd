@@ -5,6 +5,8 @@ subtitle: Rencontres R 2023
 author: "Christophe Dervieux"
 institute: "Posit PBC"
 date: 06/21/2023
+resources: 
+  - demo/*.html
 format:
   clean-revealjs:
     theme: [default, reveal-style.scss]
@@ -140,7 +142,7 @@ format:
 
 ## {background-iframe="demo/html-bootswatch.html" visibility="uncounted"}
 
-## ...facilement personalisable !
+## ...facilement personnalisable !
 
 ::: columns
 ::: {.column width="49%"}
