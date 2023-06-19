@@ -249,7 +249,7 @@ Il est ainsi possible d'accéder à toutes les variables Bootstrap, et aux varia
 
 - [Décorateurs de région]{.hl} pour définir les sections (`functions`, `defaults`, `mixins`, and `rules`)
 
-- [Superposition des sections en fonction de leur type pour intégration avec autres configuration (Bootstrap)
+- Superposition des sections en fonction de leur type pour intégration avec autres configuration (Bootstrap)
 
 - Résolution des fonctionnalité SASS `@use` ou `@import` en relatif au thème Quarto
 
@@ -284,8 +284,8 @@ Merci!
 
 ::: {.make-smaller}
 
-{{< fa tv >}} <https://cderv.github.io/rr-2023-html-theming> 
+{{< fa tv >}} <https://cderv.github.io/rr-2023-quarto-html-theming/> 
 
-{{< fa brands github >}} <https://github.com/cderv/rr-2023-html-theming>
+{{< fa brands github >}} <https://github.com/cderv/rr-2023-quarto-html-theming>
 
 :::
