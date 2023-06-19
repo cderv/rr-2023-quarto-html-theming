@@ -53,7 +53,7 @@
     "href": "index.html#comprendre-le-mécanisme",
     "title": "Se démarquer avec les thèmes HTML Quarto",
     "section": "Comprendre le mécanisme",
-    "text": "Comprendre le mécanisme\nUne simplication par rapport à une utilise basique de SASS\n\nUn unique fichier pour appliquer son thème (SASS de base en demanderait plusieurs)\nDécorateurs de région pour définir les sections (functions, defaults, mixins, and rules)\n[Superposition des sections en fonction de leur type pour intégration avec autres configuration (Bootstrap)\nRésolution des fonctionnalité SASS @use ou @import en relatif au thème Quarto\n\nVoir l’article spéciale de la documentation pour comprendre le mécanime de superpositon des sections.\n\nQuarto Themes Design"
+    "text": "Comprendre le mécanisme\nUne simplication par rapport à une utilise basique de SASS\n\nUn unique fichier pour appliquer son thème (SASS de base en demanderait plusieurs)\nDécorateurs de région pour définir les sections (functions, defaults, mixins, and rules)\nSuperposition des sections en fonction de leur type pour intégration avec autres configuration (Bootstrap)\nRésolution des fonctionnalité SASS @use ou @import en relatif au thème Quarto\n\nVoir l’article spéciale de la documentation pour comprendre le mécanime de superpositon des sections.\n\nQuarto Themes Design"
   },
   {
     "objectID": "index.html#a-retenir",
