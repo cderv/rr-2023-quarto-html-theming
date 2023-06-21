@@ -91,7 +91,7 @@ format:
 :::
 
 ::: {.top-pad .bottom-pad}
-* Le thème par défaut est basée sur Bootstrap 5 (variante **bslib**)
+* Le thème par défaut est basé sur Bootstrap 5 (variante **bslib**)
 * Des choix par défaut améliorés par rapport à R Markdown
 * Modifiable avec un simple CSS
 :::
@@ -174,7 +174,7 @@ format:
 :::
 
 ::: {.top-pad .bottom-pad}
-Des configurations simplifiés par YAML: 
+Des configurations simplifiées par YAML: 
 
 * Valeur pour des variables CSS
 * Thèmes Clair et Sombre  
@@ -249,9 +249,9 @@ Il est ainsi possible d'accéder à toutes les variables Bootstrap, et aux varia
 
 - [Décorateurs de région]{.hl} pour définir les sections (`functions`, `defaults`, `mixins`, and `rules`)
 
-- Superposition des sections en fonction de leur type pour intégration avec autres configuration (Bootstrap)
+- Superposition des sections en fonction de leur type pour leur intégration avec les autres configurations (Bootstrap)
 
-- Résolution des fonctionnalité SASS `@use` ou `@import` en relatif au thème Quarto
+- Résolution des fonctionnalités SASS `@use` ou `@import` en relatif au thème Quarto
 
 Voir [l'article spéciale de la documentation](https://quarto.org/docs/output-formats/html-themes-more.html#bootstrap-bootswatch-layering) pour comprendre le mécanime de superpositon des sections.
 
@@ -261,7 +261,7 @@ Voir [l'article spéciale de la documentation](https://quarto.org/docs/output-fo
 
 ## A retenir
 
-- Format HTML basée sur Bootstrap 5
+- Format HTML basé sur Bootstrap 5
 
 - Différents niveaux de personnalisations sont possibles
 
@@ -269,7 +269,7 @@ Voir [l'article spéciale de la documentation](https://quarto.org/docs/output-fo
 
 - Permet une réutilisation simple des thèmes pour tous les formats HTML (documents, site web, blog, ...)
 
-- Permet un partage simplifier des thèmes entre utilisateurs  
+- Permet un partage simplifié des thèmes entre utilisateurs  
   (via le mécanisme d'Extension [Custom Format](https://quarto.org/docs/extensions/formats.html))
 
 ::: aside
