@@ -18,7 +18,7 @@
     "href": "index.html#le-format-html",
     "title": "Se démarquer avec les thèmes HTML Quarto",
     "section": "Le format HTML",
-    "text": "Le format HTML\n\n\n---\ntitle: \"Démo HTML\"\nformat: html\n---\n\n\n\n\n\nbasique-style.qmd\n\n---\ntitle: \"Démo HTML personalisée\"\nformat: \n  html:\n    css: monstyle.css\n---\n\n\n\n\n\nLe thème par défaut est basée sur Bootstrap 5 (variante bslib)\nDes choix par défaut améliorés par rapport à R Markdown\nModifiable avec un simple CSS\n\n\n\nCSS"
+    "text": "Le format HTML\n\n\n---\ntitle: \"Démo HTML\"\nformat: html\n---\n\n\n\n\n\nbasique-style.qmd\n\n---\ntitle: \"Démo HTML personalisée\"\nformat: \n  html:\n    css: monstyle.css\n---\n\n\n\n\n\nLe thème par défaut est basé sur Bootstrap 5 (variante bslib)\nDes choix par défaut améliorés par rapport à R Markdown\nModifiable avec un simple CSS\n\n\n\nCSS"
   },
   {
     "objectID": "index.html#un-choix-de-thèmes-disponibles",
@@ -32,7 +32,7 @@
     "href": "index.html#facilement-personnalisable",
     "title": "Se démarquer avec les thèmes HTML Quarto",
     "section": "…facilement personnalisable !",
-    "text": "…facilement personnalisable !\n\n\n---\ntitle: \"Thème modifié\"\nformat: \n  html:\n    theme: lux\n    fontsize: 1.1em\n    linestretch: 1.7\n---\n\n\n\n---\ntitle: \"Mode Clair / Sombre\"\nformat: \n  html:\n    theme:\n      dark: darkly\n      light: flatly\n---\n\n\n\nDes configurations simplifiés par YAML:\n\nValeur pour des variables CSS\nThèmes Clair et Sombre\n\n\n\n\nYAML configuration / Dark mode"
+    "text": "…facilement personnalisable !\n\n\n---\ntitle: \"Thème modifié\"\nformat: \n  html:\n    theme: lux\n    fontsize: 1.1em\n    linestretch: 1.7\n---\n\n\n\n---\ntitle: \"Mode Clair / Sombre\"\nformat: \n  html:\n    theme:\n      dark: darkly\n      light: flatly\n---\n\n\n\nDes configurations simplifiées par YAML:\n\nValeur pour des variables CSS\nThèmes Clair et Sombre\n\n\n\n\nYAML configuration / Dark mode"
   },
   {
     "objectID": "index.html#aller-plus-loin-dans-la-personnalisation",
@@ -53,13 +53,13 @@
     "href": "index.html#comprendre-le-mécanisme",
     "title": "Se démarquer avec les thèmes HTML Quarto",
     "section": "Comprendre le mécanisme",
-    "text": "Comprendre le mécanisme\nUne simplication par rapport à une utilise basique de SASS\n\nUn unique fichier pour appliquer son thème (SASS de base en demanderait plusieurs)\nDécorateurs de région pour définir les sections (functions, defaults, mixins, and rules)\nSuperposition des sections en fonction de leur type pour intégration avec autres configuration (Bootstrap)\nRésolution des fonctionnalité SASS @use ou @import en relatif au thème Quarto\n\nVoir l’article spéciale de la documentation pour comprendre le mécanime de superpositon des sections.\n\nQuarto Themes Design"
+    "text": "Comprendre le mécanisme\nUne simplication par rapport à une utilise basique de SASS\n\nUn unique fichier pour appliquer son thème (SASS de base en demanderait plusieurs)\nDécorateurs de région pour définir les sections (functions, defaults, mixins, and rules)\nSuperposition des sections en fonction de leur type pour leur intégration avec les autres configurations (Bootstrap)\nRésolution des fonctionnalités SASS @use ou @import en relatif au thème Quarto\n\nVoir l’article spéciale de la documentation pour comprendre le mécanime de superpositon des sections.\n\nQuarto Themes Design"
   },
   {
     "objectID": "index.html#a-retenir",
     "href": "index.html#a-retenir",
     "title": "Se démarquer avec les thèmes HTML Quarto",
     "section": "A retenir",
-    "text": "A retenir\n\nFormat HTML basée sur Bootstrap 5\nDifférents niveaux de personnalisations sont possibles\nIntégration avec SASS via un fichier de thème unique\nPermet une réutilisation simple des thèmes pour tous les formats HTML (documents, site web, blog, …)\nPermet un partage simplifier des thèmes entre utilisateurs\n(via le mécanisme d’Extension Custom Format)\n\n\n\nPour s’inspirer: Gallerie Quarto\nExemple de thème communautaire: Bookup by Julien Barnier (@juba)\nThèmes clair et sombre basés sur la famille de police Roboto"
+    "text": "A retenir\n\nFormat HTML basé sur Bootstrap 5\nDifférents niveaux de personnalisations sont possibles\nIntégration avec SASS via un fichier de thème unique\nPermet une réutilisation simple des thèmes pour tous les formats HTML (documents, site web, blog, …)\nPermet un partage simplifié des thèmes entre utilisateurs\n(via le mécanisme d’Extension Custom Format)\n\n\n\nPour s’inspirer: Gallerie Quarto\nExemple de thème communautaire: Bookup by Julien Barnier (@juba)\nThèmes clair et sombre basés sur la famille de police Roboto"
   }
 ]
